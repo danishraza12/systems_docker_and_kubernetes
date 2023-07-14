@@ -2,7 +2,7 @@ version: '3'
 services:
   inventory:
     container_name: inventory-service
-    build: ./inventory-service
+    build: ./inventory-service # docker compose will use this path to get this container's Dockerfile
     entrypoint: nodemon server.js
     volumes:
       - ./inventory-service:/app
